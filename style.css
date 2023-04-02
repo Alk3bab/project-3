@@ -70,3 +70,26 @@ body{
   );
 }
 
+.homepic{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 600px;
+  width: 1500px;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product {
+  width: 30%;
+  padding: 2vh;
+  margin: 1vh;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+

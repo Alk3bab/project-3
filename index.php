@@ -1,8 +1,11 @@
 <?php
-include'navbar.php';
+include'menu.php';
 ?>
 <html>
-    <body>
+    <head>
+    </head>
 
+<body>
+    <img src="black.jpg" alt="" class="homepic">
 </body>
 </html>

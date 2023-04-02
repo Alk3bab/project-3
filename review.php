@@ -1,3 +1,3 @@
 <?php
-include'navbar.php'
+include'menu.php'
 ?>
