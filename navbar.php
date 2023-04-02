@@ -1,51 +1,27 @@
 
-
+ 
 <html>
-    <body>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+        <h1 class="boost">Boost Nutrition</h1>
         <nav>
-            <ul>
+            <ul class="navbar">
                 <li><a href="index.php">home</a></li>
-                <li><a href="">nnvjnjv</a></li>
-                <li><a href="">wovnown</a></li>
-                <li><a href="">kvwnvnwken</a></li>
+                <li><a href="test.php">proteine</a></li>
+                <li><a href="menu.php">creatine</a></li>
+                <li><a href="">pre workout</a></li>
+        <div class="dropdown">
+            <button class="dropbtn">forms</button>
+            <div class="dropdown-content">
+                <a href="klachten.php">klachten formulier</a>
+                <a href="review.php">review formulier</a>
+            </div>
+        </div>
+
             </ul>
         </nav>
-    </body>
 </html>
-
-
 <style>
-     * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: white;
-    color: black;
-     }
-     nav {
-        background-color: var(--color-black);
-        height: 80px;
-        width: 100%;
-        display: flex;
-        justify-content: left;
-        align-items:center;
-        padding: 0 5%;
-        position: relative;
-     }
-
-     nav ul {
-        list-style: none;
-        display:flex;
-     }
-
-     nav ul li{
-        padding: 10px 30px;
-
-        position: relative;
-     }
-
-
-
-
-
+a:link { text-decoration: none; }
 </style>
