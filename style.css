@@ -75,8 +75,8 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 600px;
-  width: 1500px;
+  height: 60vh;
+  width: 180vh;
 }
 
 .product-container {
@@ -91,5 +91,53 @@ body{
   margin: 1vh;
   border: 1px solid #ccc;
   text-align: center;
+}
+
+input[type=text], select,textarea{
+  width: 100%;
+  border: 1px solid gray;
+  padding: 12px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+
+}
+
+.rform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 20px;
+    width: 50vh;
+}    
+
+.kform{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 20px;
+  width: 50vh ;
+  
+}
+
+.r-msg{
+  height: 20vh;
+}
+
+.k-msg{
+  height: 20vh;
+
+}
+
+.r-knop{
+  color: #3282c7;
+}
+
+.k-knop{
+  background-color: #3282c7;
 }
 
