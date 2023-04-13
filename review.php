@@ -42,12 +42,12 @@ include'menu.php'
   $sqlSelect = "SELECT * FROM reviews ";
   $data = $conn->query($sqlSelect);
 
-  /*foreach ($data as $row) {
-    echo $row['id'] . " ";
-    echo $row['datumstijd'] . " ";
-    echo $row['naam'] . " ";
-    echo $row['bericht'] . " ";
-    echo "<a href='VerwijderBericht.php?id=" . $row['id'] . "'>Verwijderen</a>";
+  foreach ($data as $row) {
+    echo $row['Id'] . " ";
+    echo $row['datetime'] . " ";
+    echo $row['name'] . " ";
+    echo $row['review'] . " ";
+    echo "<a href='VerwijderBericht.php?id=" . $row['Id'] . "'>Verwijderen</a>";
     echo "<br/>";
-  }*/
+  }
 ?>

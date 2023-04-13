@@ -42,12 +42,12 @@ include'menu.php'
   $sqlSelect = "SELECT * FROM klachten";
   $data = $conn->query($sqlSelect);
 
-  /*foreach ($data as $row) {
+  foreach ($data as $row) {
     echo $row['id'] . " ";
     echo $row['datumtijd'] . " ";
     echo $row['naam'] . " ";
     echo $row['bericht'] . " ";
     echo "<a href='deletemsg.php?id=" . $row['id'] . "'>Verwijderen</a>";
     echo "<br/>";
-  }*/
+  }
 ?>
