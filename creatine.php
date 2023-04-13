@@ -6,7 +6,7 @@ include'menu.php';
     <body>
     <div class="product-container">
   <div class="product">
-    <img src="ATPshake.webp" alt="Product 1">
+    <img src="ATPshake.webp" alt="Product 1" width="250vh">
     <h3>ATP SCIENCE Creatine</h3>
     <p>€19.99</p>
   </div>
@@ -42,37 +42,37 @@ include'menu.php';
   </div>
   
   <div class="product">
-    <img src="applieshake.jpg" alt="Product 6">
+    <img src="applieshake.jpg" alt="Product 7">
     <h3>Creatine Micronized 250G</h3>
     <p>€19.99</p>
   </div>
 
   <div class="product">
-    <img src="slimshake.jpg" alt="Product 6">
+    <img src="slimshake.jpg" alt="Product 8">
     <h3>100% Creatine Monohydrate</h3>
     <p>€22.99</p>
   </div>
 
   <div class="product">
-    <img src="synshake.jpg" alt="Product 6">
+    <img src="synshake.jpg" alt="Product 9">
     <h3>Syntech Creatine Monohydrate</h3>
     <p>€14.99</p>
   </div>
 
   <div class="product">
-    <img src="qntshake.jpg" alt="Product 6">
+    <img src="qntshake.jpg" alt="Product 10">
     <h3>QNT Creatine Monohydrate</h3>
     <p>€24.99</p>
   </div>
 
   <div class="product">
-    <img src="myproshake.jpg" alt="Product 6">
+    <img src="myproshake.jpg" alt="Product 11">
     <h3>Creatinemonohydraat Tabletten</h3>
     <p>€22.99</p>
   </div>
 
   <div class="product">
-    <img src="bioshake.jpg" alt="Product 6">
+    <img src="bioshake.jpg" alt="Product 12">
     <h3>Creatine Monohydraat</h3>
     <p>€16.99</p>
   </div>

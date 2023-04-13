@@ -25,12 +25,12 @@ include'menu.php';
 
   <div class="product">
     <img src="ftwshake.jpg" alt="Product 4">
-    <h3> Nutrition - Whey PROTEÏNE - Dieet Shake /h3>
+    <h3> Nutrition - Whey PROTEÏNE - Dieet Shake </h3>
     <p>€15.99</p>
   </div>
 
   <div class="product">
-    <img src="beatyshake.jpg" alt="Product 5">
+    <img src="beatyshake.jpg" alt="Product 5" width="250vh">
     <h3>BEAUTY & SKINNY PROTEÏNE SHAKE</h3>
     <p>€29.99</p>
   </div>
@@ -42,37 +42,37 @@ include'menu.php';
   </div>
   
   <div class="product">
-    <img src="dmkshake.jpg" alt="Product 6">
+    <img src="dmkshake.jpg" alt="Product 7">
     <h3>DMK Whey Proteïne shake Aardbei</h3>
     <p>€19.99</p>
   </div>
 
   <div class="product">
-    <img src="slimshake.jpg" alt="Product 6">
+    <img src="slimshake.jpg" alt="Product 8">
     <h3>Slim Protein Shake (Afslank Shake)</h3>
     <p>€22.99</p>
   </div>
 
   <div class="product">
-    <img src="veganshakee.jpg" alt="Product 6">
+    <img src="veganshakee.jpg" alt="Product 9">
     <h3>VEGAN PROTEÏNE SHAKE-1kg</h3>
     <p>€14.99</p>
   </div>
 
   <div class="product">
-    <img src="optiumshake.jpg" alt="Product 6">
+    <img src="optiumshake.jpg" alt="Product 10">
     <h3>OPTIMUM PROTEIN SHAKE</h3>
     <p>€27.99</p>
   </div>
 
   <div class="product">
-    <img src="bodylabshake.jpg" alt="Product 6">
+    <img src="bodylabshake.jpg" alt="Product 11">
     <h3>BodyLab Whey Protein</h3>
     <p>€23.99</p>
   </div>
 
   <div class="product">
-    <img src="aardbeishake.jpg" alt="Product 6">
+    <img src="aardbeishake.jpg" alt="Product 12">
     <h3>Smoothie Aardbei</h3>
     <p>€18.99</p>
   </div>
