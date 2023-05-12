@@ -11,6 +11,7 @@
                 <li><a href="proteine.php">proteine</a></li>
                 <li><a href="creatine.php">creatine</a></li>
                 <li><a href="workout.php">pre workout</a></li>
+                <li><a href="voorraad.php">voorraad</a></li>
         <div class="dropdown">
             <button class="dropbtn">forms</button>
             <div class="dropdown-content">

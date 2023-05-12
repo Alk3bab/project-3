@@ -1,4 +1,5 @@
 <?php
+    include 'menu.php';
     echo "<h1>Update Bier</h1>";
     require_once('functions.php');
 
@@ -6,14 +7,14 @@
     if(isset($_POST) && isset($_POST['btn_wzg'])){
         UpdateBier($_POST);
 
-        header("location: crud_bieren.php");
+        header("location: voorraad.php");
     }
 
     if(isset($_GET['biercode'])){  
         echo "Data uit het vorige formulier:<br>";
         // Haal alle info van de betreffende biercode $_GET['biercode']
         $biercode = $_GET['biercode'];
-        $row = GetBier($biercode);
+        $row = Getproducts($biercode);
     }
    ?>
 
@@ -21,12 +22,11 @@
     <body>
         <form method="post">
         <br>
-        Biercode:<input type="" name="biercode" value="<?php echo $row['biercode'];?>"><br>
-        Naam:<input type="" name="naam" value="<?php echo $row['naam'];?>"><br> 
-        Soort: <input type="text" name="soort" value="<?= $row['soort']?>"><br>
-        Stijl: <input type="text" name="stijl" value="<?= $row['stijl']?>"><br>
-        Alcohol: <input type="text" name="alcohol" value="<?= $row['alcohol']?>"><br>
-        Brouwcode: <input type="text" name="brouwcode" value="<?= $row['brouwcode']?>"><br><br>
+        Id:<input type="" name="biercode" value="<?php echo $row['Id'];?>"><br>
+        Name:<input type="" name="naam" value="<?php echo $row['name'];?>"><br> 
+        description: <input type="text" name="soort" value="<?= $row['description']?>"><br>
+        price: <input type="text" name="stijl" value="<?= $row['price']?>"><br>
+        image: <input type="text" name="alcohol" value="<?= $row['image']?>"><br>
          <input type="submit" name="btn_wzg" value="Wijzigen"><br>
         </form>
     </body>

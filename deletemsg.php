@@ -1,19 +1,19 @@
 <?php 
 include "connectpdo.php";
 
-if(isset($_GET['id']))
+if(isset($_GET['grow']))
 {
-  $id = $_GET['id'];
-  echo "$id";
+  $grow = $_GET['grow'];
+  echo "$grow";
 
   try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $sql = "DELETE FROM klachten WHERE id=:id";
+    $sql = "DELETE FROM klachten WHERE grow=:grow";
     $stmt = $conn->prepare($sql);
-    $stmt->bindParam(':id', $id);
+    $stmt->bindParam(':grow', $grow);
     $stmt->execute();
     echo "Record deleted successfully";
     header('Location: klachten.php');

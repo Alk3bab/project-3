@@ -16,7 +16,7 @@
         
         // Haal alle info van de betreffende biercode $_GET['biercode']
         $biercode = $_GET['biercode'];
-        $row = GetBier($biercode);
+        $row = Getproducts($biercode);
     }
    ?>
 

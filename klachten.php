@@ -43,7 +43,6 @@ include'menu.php'
   $data = $conn->query($sqlSelect);
 
   foreach ($data as $row) {
-    echo $row['id'] . " ";
     echo $row['datumtijd'] . " ";
     echo $row['naam'] . " ";
     echo $row['bericht'] . " ";

@@ -1,11 +1,11 @@
 <?php
-// auteur: Wigmans
+// auteur: Ali Küçük
 // functie: algemene functies tbv hergebruik
  function ConnectDb(){
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "bieren";
+    $dbname = "projecta";
    
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -39,7 +39,7 @@
     return $result;
  }
 
- function GetBier($biercode){
+ function Getproducts($biercode){
     // Connect database
     $conn = ConnectDb();
 
@@ -48,18 +48,18 @@
     // $result = $conn->query("SELECT * FROM $table")->fetchAll();
 
     // Select data uit de opgegeven table methode prepare
-    $query = $conn->prepare("SELECT * FROM bier WHERE biercode = :biercode");
-    $query->execute([':biercode'=>$biercode]);
+    $query = $conn->prepare("SELECT * FROM products WHERE id = :id");
+    $query->execute([':id'=>$biercode]);
     $result = $query->fetch();
 
     return $result;
  }
 
 
- function OvzBieren(){
+ function Ovzproducts(){
 
     // Haal alle bier record uit de tabel 
-    $result = GetData("bier");
+    $result = GetData("products");
     
     //print table
     PrintTable($result);
@@ -119,16 +119,16 @@ function PrintTable($result){
     echo $table;
 }
 
-function CrudBieren(){
+function Crud(){
 
     // Haal alle bier record uit de tabel 
-    $result = GetData("bier");
+    $result = GetData("products");
     
     //print table
-    PrintCrudBier($result);
+    PrintCrud($result);
     
  }
-function PrintCrudBier($result){
+function PrintCrud($result){
     // Zet de hele table in een variable en print hem 1 keer 
     $table = "<table border = 1px>";
 
@@ -153,12 +153,12 @@ function PrintCrudBier($result){
         
         // Wijzig knopje
         $table .= "<td>". 
-            "<form method='post' action='update_bier.php?biercode=$row[biercode]' >       
+            "<form method='post' action='update_bier.php?biercode=$row[Id]' >       
                     <button name='wzg'>Wzg</button>	 
             </form>" . "</td>";
 
         // Delete via linkje href
-        $table .= '<td><a href="delete_bier.php?biercode='.$row["biercode"].'">verwijder</a></td>';
+        $table .= '<td><a href="delete_bier.php?biercode='.$row["Id"].'">verwijder</a></td>';
         
         $table .= "</tr>";
     }
@@ -178,8 +178,7 @@ function UpdateBier($row){
     `soort` = '$row[soort]', 
     `stijl` = '$row[stijl]', 
     `alcohol` = '$row[alcohol]', 
-    `brouwcode` = '$row[brouwcode]'
-    WHERE `bier`.`biercode` = $row[biercode]";
+    WHERE `products`.`Id` = $row[biercode]";
     $query = $conn->prepare($sql);
     $query->execute();
 }
@@ -190,8 +189,8 @@ function DeleteBier($row){
     $conn = ConnectDb();
 
     $sql = "DELETE 
-    FROM bier
-    WHERE `bier`.`biercode` = $row[biercode]";
+    FROM project3
+    WHERE `products`.`Id` = $row[biercode]";
     $query = $conn->prepare($sql);
     $query->execute();
 }
