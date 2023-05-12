@@ -10,11 +10,11 @@
         header("location: voorraad.php");
     }
 
-    if(isset($_GET['biercode'])){  
+    if(isset($_GET['id'])){  
         echo "Data uit het vorige formulier:<br>";
         // Haal alle info van de betreffende biercode $_GET['biercode']
-        $biercode = $_GET['biercode'];
-        $row = Getproducts($biercode);
+        $id = $_GET['id'];
+        $row = Getproducts($id);
     }
    ?>
 
@@ -22,7 +22,7 @@
     <body>
         <form method="post">
         <br>
-        Id:<input type="" name="biercode" value="<?php echo $row['Id'];?>"><br>
+        Id:<input type="" name="id" value="<?php echo $row['id'];?>"><br>
         Name:<input type="" name="naam" value="<?php echo $row['name'];?>"><br> 
         description: <input type="text" name="soort" value="<?= $row['description']?>"><br>
         price: <input type="text" name="stijl" value="<?= $row['price']?>"><br>

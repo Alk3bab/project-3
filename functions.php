@@ -39,7 +39,7 @@
     return $result;
  }
 
- function Getproducts($biercode){
+ function Getproducts($id){
     // Connect database
     $conn = ConnectDb();
 
@@ -49,7 +49,7 @@
 
     // Select data uit de opgegeven table methode prepare
     $query = $conn->prepare("SELECT * FROM products WHERE id = :id");
-    $query->execute([':id'=>$biercode]);
+    $query->execute([':id'=>$id]);
     $result = $query->fetch();
 
     return $result;
@@ -153,12 +153,12 @@ function PrintCrud($result){
         
         // Wijzig knopje
         $table .= "<td>". 
-            "<form method='post' action='update_bier.php?biercode=$row[Id]' >       
+            "<form method='post' action='update_bier.php?id=$row[id]' >       
                     <button name='wzg'>Wzg</button>	 
             </form>" . "</td>";
 
         // Delete via linkje href
-        $table .= '<td><a href="delete_bier.php?biercode='.$row["Id"].'">verwijder</a></td>';
+        $table .= '<td><a href="delete_bier.php?id='.$row["id"].'">verwijder</a></td>';
         
         $table .= "</tr>";
     }
@@ -172,13 +172,13 @@ function UpdateBier($row){
 
     $conn = ConnectDb();
 
-    $sql = "UPDATE `bier` 
+    $sql = "UPDATE products
     SET 
-    `naam` = '$row[naam]', 
-    `soort` = '$row[soort]', 
-    `stijl` = '$row[stijl]', 
-    `alcohol` = '$row[alcohol]', 
-    WHERE `products`.`Id` = $row[biercode]";
+    `name` = '$row[naam]', 
+    `description` = '$row[soort]', 
+    `price` = '$row[stijl]', 
+    `image` = '$row[alcohol]', 
+    WHERE 'products'.`id` = '$row[biercode]'";
     $query = $conn->prepare($sql);
     $query->execute();
 }
@@ -189,8 +189,8 @@ function DeleteBier($row){
     $conn = ConnectDb();
 
     $sql = "DELETE 
-    FROM project3
-    WHERE `products`.`Id` = $row[biercode]";
+    FROM products
+    WHERE `id` = $row[id]";
     $query = $conn->prepare($sql);
     $query->execute();
 }
